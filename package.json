@@ -1,0 +1,39 @@
+{
+  "name": "skeleton-hack2020",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack serve --config webpack/webpack.config.js --color --mode development",
+    "build": "npm run-script build:webpack",
+    "build:webpack": "npx cross-env NODE_ENV=production webpack --config webpack/webpack.config.js"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "redux": "^4.0.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "http-proxy-middleware": "^1.0.6",
+    "image-webpack-loader": "^7.0.1",
+    "less-loader": "^7.0.2",
+    "process": "^0.11.10",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.0.3",
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0",
+    "workbox-webpack-plugin": "^5.1.4"
+  }
+}
