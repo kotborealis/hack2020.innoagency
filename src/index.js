@@ -6,6 +6,7 @@ import {configureStore} from '@reduxjs/toolkit';
 import rootReducer from './reducers';
 import {ViewLanding} from './views/Landing/';
 import 'semantic-ui-css/semantic.min.css';
+import './index.css';
 
 const store = configureStore({
     reducer: rootReducer
