@@ -244,7 +244,7 @@ export const PetForm = () => {
                         {vaccinations.map((vaccination, i) => <Segment>
                             <Form.Input fluid label='Дата'
                                         onChange={(e, {value}) =>
-                                            setTreatments([...treatments.slice(0, i), {
+                                            setVaccinations([...vaccinations.slice(0, i), {
                                                 ...vaccination,
                                                 date: value
                                             }, ...vaccinations.slice(i + 1)])}
@@ -252,7 +252,7 @@ export const PetForm = () => {
                                         placeholder={'Дата'}/>
                             <Form.Input fluid label='Вид вакцины'
                                         onChange={(e, {value}) =>
-                                            setTreatments([...treatments.slice(0, i), {
+                                            setVaccinations([...vaccinations.slice(0, i), {
                                                 ...vaccination,
                                                 name: value
                                             }, ...vaccinations.slice(i + 1)])}
@@ -260,7 +260,7 @@ export const PetForm = () => {
                                         placeholder={'Вид вакцины'}/>
                             <Form.Input fluid label='№ серии'
                                         onChange={(e, {value}) =>
-                                            setTreatments([...treatments.slice(0, i), {
+                                            setVaccinations([...vaccinations.slice(0, i), {
                                                 ...vaccination,
                                                 series: value
                                             }, ...vaccinations.slice(i + 1)])}
