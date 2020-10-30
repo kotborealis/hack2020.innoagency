@@ -1,5 +1,5 @@
 {
-  "redirects": [
+  "rewrites": [
     { "source": "/addPet", "destination": "/index.html" }
   ]
 }
