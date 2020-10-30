@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/addPet", "destination": "/index.html" }
+  ]
+}
