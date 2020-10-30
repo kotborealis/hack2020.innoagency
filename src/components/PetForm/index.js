@@ -37,10 +37,14 @@ export const PetForm = () => {
         setState(root);
     };
 
-    console.log(state, vaccinations, treatments);
+    console.log({
+        ...state,
+        treatment_info: treatments,
+        vaccination_info: vaccinations,
+    });
 
     return (
-        <Form onSubmit={console.log.bind(console)}>
+        <Form>
             <Segment.Group>
                 <Segment>
                     <Header as={'h2'}>Общие сведения</Header>
