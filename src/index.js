@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import {Suspense} from 'react';
 import {NetworkErrorBoundary, CacheProvider} from 'rest-hooks';
 import {MockProvider} from '@rest-hooks/test';
-import {MemoryRouter, Route, Switch} from 'react-router';
+import {Route, Switch} from 'react-router';
+import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {configureStore} from '@reduxjs/toolkit';
 import rootReducer from './reducers';
@@ -11,6 +12,7 @@ import {ViewLanding} from './views/Landing/';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 import {AnimalResourceFixtures} from './resources/Animal';
+import {ViewAddPet} from './views/AddPet';
 
 const store = configureStore({
     reducer: rootReducer
@@ -18,22 +20,21 @@ const store = configureStore({
 
 const RouterRoot = ({children}) => {
     return (
-        <MemoryRouter basename={process.env.PUBLIC_PATH || '/'}>
+        <BrowserRouter basename={process.env.PUBLIC_PATH || '/'}>
             <Switch>
                 {children}
             </Switch>
-        </MemoryRouter>
+        </BrowserRouter>
     );
 };
 
 const Routes = () => {
     return (<>
+        <Route path="/addPet">
+            <ViewAddPet/>
+        </Route>
         <Route exact path="/">
-            <Suspense fallback={"loading"}>
-                <NetworkErrorBoundary>
-                    <ViewLanding/>
-                </NetworkErrorBoundary>
-            </Suspense>
+            <ViewLanding/>
         </Route>
     </>);
 };
